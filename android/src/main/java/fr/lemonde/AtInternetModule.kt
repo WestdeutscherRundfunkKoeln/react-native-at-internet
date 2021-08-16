@@ -154,6 +154,18 @@ class AtInternetModule(private val reactContext: ReactApplicationContext) : Reac
     }
 
     @ReactMethod
+    fun event(parameters: ReadableMap, promise: Promise) {
+        if (!parameters.hasKey("name")) {
+            promise.reject(Exception("Missing mandatory screen field \"name\""))
+        }
+
+        val event = tracker.Event().add(parameters.getString("name"), parameters.getString("data"))
+
+        tracker.dispatch()
+        promise.resolve(true)
+    }
+
+    @ReactMethod
     fun navigation(parameters: ReadableMap, promise: Promise) {
         try {
             val gesture = gesture(parameters)
