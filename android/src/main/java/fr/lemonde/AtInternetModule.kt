@@ -159,7 +159,11 @@ class AtInternetModule(private val reactContext: ReactApplicationContext) : Reac
             promise.reject(Exception("Missing mandatory screen field \"name\""))
         }
 
-        val event = tracker.Event().add(parameters.getString("name"), parameters.getString("data"))
+
+
+//        android.util.Log.d("HELLO, "event() called with: parameters = $parameters, promise = $promise")
+
+        // val event = tracker.Events().add(parameters.getString("name"), parameters.getMap("data"))
 
         tracker.dispatch()
         promise.resolve(true)
