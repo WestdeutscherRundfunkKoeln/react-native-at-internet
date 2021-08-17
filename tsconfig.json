@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
-      "@westdeutscherrundfunkkoeln/react-native-at-internet": ["./src"]
+      "@westdeutscherrundfunkkoeln/react-native-at-internet": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
