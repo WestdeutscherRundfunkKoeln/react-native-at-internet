@@ -48,6 +48,7 @@ function App() {
           payload: { url: url.href.replace(url.search, ''), params },
         });
       });
+
       setReady(true);
     })();
   }, []);

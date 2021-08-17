@@ -36,7 +36,7 @@ export default function ProductPage() {
       // }
 
       // @ts-ignore
-      AtInternet.event({ name: 'testEvent', data: { some: 'data' } });
+      AtInternet.event({ name: 'test.event', data: { some: 'data_1' } });
     }, [route, navigation])
   );
 
