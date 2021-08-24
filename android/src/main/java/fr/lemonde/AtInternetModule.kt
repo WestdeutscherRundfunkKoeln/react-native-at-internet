@@ -168,6 +168,11 @@ class AtInternetModule(private val reactContext: ReactApplicationContext) : Reac
     }
 
     @ReactMethod
+    fun getLifecycleMetrics(promise: Promise) {
+        promise.resolve(tracker.getLifecycleMetrics().toString())
+    }
+
+    @ReactMethod
     fun navigation(parameters: ReadableMap, promise: Promise) {
         try {
             val gesture = gesture(parameters)
