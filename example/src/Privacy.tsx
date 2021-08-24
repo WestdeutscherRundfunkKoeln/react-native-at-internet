@@ -115,7 +115,7 @@ export default function Privacy() {
                 <Button
                   title="Test Metrics"
                   onPress={async () => {
-                    const metrics = await AtInternet.getLivecycleMetrics();
+                    const metrics = await AtInternet.getLifecycleMetrics();
 
                     console.log({ metrics });
                   }}

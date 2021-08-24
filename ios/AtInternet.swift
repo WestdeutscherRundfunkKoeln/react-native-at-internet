@@ -137,7 +137,7 @@ class AtInternet: RCTEventEmitter, TrackerDelegate {
         resolve(true)
     }
 
-    @objc(getLivecycleMetrics:withRejecter:)
+    @objc(getLifecycleMetrics:withRejecter:)
     func event(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
         let metrics = self.tracker.getLifecycleMetrics()
         resolve(metrics)

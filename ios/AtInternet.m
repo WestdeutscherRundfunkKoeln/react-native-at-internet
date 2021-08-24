@@ -27,7 +27,7 @@ RCT_EXTERN_METHOD(event:(NSDictionary)parameters
                  withResolver:(RCTPromiseResolveBlock)resolve
                  withRejecter:(RCTPromiseRejectBlock)reject)
 
-RCT_EXTERN_METHOD(getLivecycleMetrics:(RCTPromiseResolveBlock)resolve
+RCT_EXTERN_METHOD(getLifecycleMetrics:(RCTPromiseResolveBlock)resolve
                   withRejecter:(RCTPromiseRejectBlock)reject)
 
 RCT_EXTERN_METHOD(touch:(NSDictionary)parameters

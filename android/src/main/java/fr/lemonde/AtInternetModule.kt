@@ -168,7 +168,7 @@ class AtInternetModule(private val reactContext: ReactApplicationContext) : Reac
     }
 
     @ReactMethod
-    fun getLivecycleMetrics(promise: Promise) {
+    fun getLifecycleMetrics(promise: Promise) {
         promise.resolve(tracker.getLifecycleMetrics().toString())
     }
 
