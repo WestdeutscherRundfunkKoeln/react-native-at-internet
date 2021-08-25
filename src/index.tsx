@@ -134,8 +134,7 @@ interface ECommerceTransaction {
   promocode?: [string];
   firstpurchase?: boolean;
 }
-
-interface LifecycleMetrics {
+export interface LifecycleMetrics {
   dsfs: number;
   dsls: number;
   fs: number;
