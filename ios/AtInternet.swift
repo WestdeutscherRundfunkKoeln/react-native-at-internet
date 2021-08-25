@@ -136,13 +136,13 @@ class AtInternet: RCTEventEmitter, TrackerDelegate {
         self.tracker.dispatch()
         resolve(true)
     }
-
-    @objc(getLifecycleMetrics:withRejecter:)
-    func getLifecycleMetrics(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
+    
+    @objc(getSessionId:withRejecter:)
+    func getSessionId(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
         let metrics = self.tracker.getLifecycleMetrics()
-        resolve(metrics)
+        let sessionId = metrics[sessionId]
+        resolve(sessionId)
     }
-
 
     @objc(screen:withResolver:withRejecter:)
     func screen(parameters: [String: Any], resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
