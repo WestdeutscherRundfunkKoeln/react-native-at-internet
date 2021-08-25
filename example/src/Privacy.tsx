@@ -113,11 +113,11 @@ export default function Privacy() {
 
               <View style={styles.Row}>
                 <Button
-                  title="Test Metrics"
+                  title="Test SessionId"
                   onPress={async () => {
-                    const metrics = await AtInternet.getLifecycleMetrics();
+                    const sessionId = await AtInternet.getSessionId();
 
-                    console.log({ metrics });
+                    console.log({ sessionId });
                   }}
                 />
               </View>

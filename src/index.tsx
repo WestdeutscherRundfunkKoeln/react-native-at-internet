@@ -166,7 +166,7 @@ type AtInternetType = {
   unsetVisitor(): Promise<true>;
   // END Visitor native methods
 
-  getLifecycleMetrics(): Promise<LifecycleMetrics>;
+  getSessionId(): Promise<String>;
 
   // START Events native methods
   event(parameters: Record<string, number | string | boolean>): Promise<true>;
