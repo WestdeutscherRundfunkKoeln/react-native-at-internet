@@ -140,7 +140,7 @@ class AtInternet: RCTEventEmitter, TrackerDelegate {
     @objc(getSessionId:withRejecter:)
     func getSessionId(resolve: RCTPromiseResolveBlock, reject: RCTPromiseRejectBlock) {
         let metrics = self.tracker.getLifecycleMetrics()
-        let sessionId = metrics[sessionId]
+        let sessionId = metrics["sessionId"]
         resolve(sessionId)
     }
 
