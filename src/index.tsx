@@ -165,7 +165,7 @@ type AtInternetType = {
   unsetVisitor(): Promise<true>;
   // END Visitor native methods
 
-  getSessionId(): Promise<String>;
+  getSessionId(): Promise<string>;
 
   // START Events native methods
   event(parameters: Record<string, number | string | boolean>): Promise<true>;
