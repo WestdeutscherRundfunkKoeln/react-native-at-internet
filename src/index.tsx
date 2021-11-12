@@ -144,6 +144,15 @@ export interface LifecycleMetrics {
   sessionId: string;
 }
 
+export interface EventDataParameters {
+  [key: string]: string | number | boolean | undefined;
+}
+
+export interface EventParameters {
+  data: EventDataParameters;
+  name: string;
+}
+
 type AtInternetType = {
   // START Configuration native methods
   setLevel2(level2: number): Promise<true>;
@@ -168,7 +177,7 @@ type AtInternetType = {
   getSessionId(): Promise<string>;
 
   // START Events native methods
-  event(parameters: Record<string, number | string | boolean>): Promise<true>;
+  event(parameters: EventParameters): Promise<true>;
   screen(parameters: HitParameters): Promise<true>;
   navigation(parameters: HitParameters): Promise<true>;
   download(parameters: HitParameters): Promise<true>;
