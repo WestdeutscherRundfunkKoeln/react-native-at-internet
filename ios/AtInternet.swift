@@ -132,7 +132,7 @@ class AtInternet: RCTEventEmitter, TrackerDelegate {
             return
         }
 
-        _ = self.tracker.events.add(name: parameters["name"] as! String, data: parameters["data"] as! [String: String])
+        _ = self.tracker.events.add(name: parameters["name"] as! String, data: parameters["data"] as! [String: Any])
         self.tracker.dispatch()
         resolve(true)
     }
