@@ -145,7 +145,7 @@ export interface LifecycleMetrics {
 }
 
 export interface EventDataParameters {
-  [key: string]: string | number | boolean | undefined;
+  [key: string]: string | number | boolean | undefined | string[];
 }
 
 export interface EventParameters {
